@@ -15,4 +15,4 @@ Demo can be found here: [https://petter0619.github.io/react-todo-list/](https://
 * Cards marked as 'done' are moved to the bottom of the list.
 
 ### Technical description
-* State is kept in a object and *NOT* in the DOM meaning the view should be dependent on the state, not the other way around.
+* State is persisted in [localstorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). When the app is closed and then opened again, the state will be restored.

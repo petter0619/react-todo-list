@@ -28,6 +28,19 @@ class App extends React.Component {
     this.setState({ ...this.state, todos });
   };
 
+  addToLocalStorage = (key, value) => localStorage.setItem(key, value);
+
+  getFromLocalStorage = (key) => JSON.parse(localStorage.getItem(key));
+
+  componentDidMount() {
+    const todoSave = this.getFromLocalStorage('todoSave');
+    if (todoSave) this.setState(todoSave);
+  }
+
+  componentDidUpdate() {
+    this.addToLocalStorage('todoSave', JSON.stringify(this.state));
+  }
+
   render() {
     return (
       <main>
