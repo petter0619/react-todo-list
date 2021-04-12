@@ -1,0 +1,46 @@
+.form {
+    display: flex;
+    margin: 0;
+    padding: 10px;
+    font-family: 'Long Cang', cursive;
+    color: $primaryTextColor;
+    text-align: center;
+    text-shadow: 1px 1px black;
+    background: $primaryColor;
+
+    &__input {
+        width: 100%;
+        padding: 0.4em 0.8em;
+        border: 1px solid $tertiaryColor;
+        outline: none;
+    }
+
+    &__submit {
+        width: auto;
+        min-width: 100px;
+        padding: 6px 12px;
+        border: 2px solid $tertiaryColor;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+        font-size: 16px;
+        color: $primaryTextColor;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+        user-select: none;
+
+        &:hover,
+        &:active {
+            background-color: $tertiaryColor;
+            color: $primaryColor;
+        }
+    }
+}
+
+@include media-max300 {
+    .form__submit {
+        min-width: 0;
+        font-size: 14px;
+    }
+}

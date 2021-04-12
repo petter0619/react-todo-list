@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Long+Cang&family=Pacifico&family=Patrick+Hand&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+$primaryColor: #0d6efd;
+$secondaryColor: #cfe2ff;
+$tertiaryColor: white;
+$primaryTextColor: white;
+
+@mixin media-desktop {
+    @media screen and (min-width: 800px) {
+        @content;
+    }
+}
+
+@mixin media-max400 {
+    @media screen and (max-width: 400px) {
+        @content;
+    }
+}
+
+@mixin media-max300 {
+    @media screen and (max-width: 300px) {
+        @content;
+    }
+}

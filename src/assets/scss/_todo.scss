@@ -1,0 +1,72 @@
+.list-item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
+    padding: 10px;
+    list-style: none;
+
+    &--pending {
+        order: 2;
+    }
+
+    &--done {
+        order: 4;
+    }
+
+    &__checkbox {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+      
+        width: 20px;
+        height: 20px;
+        border: 1px solid $primaryColor;
+        border-radius: 50%;
+        outline: none;
+
+        &:checked {
+            background: $primaryColor;
+        }
+
+        &:active {
+            border: none;
+            background: blue;
+        }
+    }
+
+    &__label {
+        font-family: 'Patrick Hand', cursive;
+        color: #404040;
+
+        &--done {
+            text-decoration: line-through;
+            color: $primaryColor;
+        }
+    }
+
+    &__delete-btn {
+        color: red;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        &:active {
+            background-color: red;
+            color: $primaryTextColor;
+            outline: none;
+        }
+    }
+}
+
+@include media-desktop {
+    .list-item__label:hover {
+        color: $primaryColor;
+    }
+    
+    .list-item__delete-btn:hover {
+        border: 1px solid red;
+    }
+}

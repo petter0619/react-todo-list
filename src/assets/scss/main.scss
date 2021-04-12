@@ -1,0 +1,28 @@
+@import 'config';
+@import 'header';
+@import 'form';
+@import 'list';
+@import 'todo';
+@import 'footer';
+
+body {
+  margin: 0;
+  background-color: $secondaryColor;
+}
+
+.container {
+  width: 400px;
+  margin: 30px auto;
+  background: $tertiaryColor;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+}
+
+@include media-max400 {
+  .container {
+      width: 100%;
+  }
+}

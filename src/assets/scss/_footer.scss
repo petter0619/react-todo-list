@@ -1,0 +1,16 @@
+.underline {
+    width: 100px;
+    border: 1px solid $primaryColor;
+    opacity: 20%;
+}
+
+.quote {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 10px;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    color: $primaryColor;
+    opacity: 0.85;
+    text-shadow: 1px 1px white;
+}
