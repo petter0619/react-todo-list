@@ -1,4 +1,4 @@
-# Vanilla JS Todo List
+# React Todo List
 
 This is the classic Todo app exercise. Tech stack:
 * React JS (using class based components)
